@@ -1,0 +1,212 @@
+/* Color Palette
+#2B2D42 - dark blue
+#8D99AE - light blue
+#EDF2F4 - blue/white
+#EF233C - red
+*/
+
+
+
+/* Global styles */
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+	box-sizing: border-box;
+  }
+  *, *:before, *:after {
+	box-sizing: inherit;
+  }
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0; /* remove white border around whole page so bg colors span all the way across */
+
+}
+
+h1, h2{
+	font-family: 'Caveat', cursive;
+	font-weight: 400;
+}
+
+h1 {
+	font-size: 80px;
+}
+h2{
+	font-size: 40px;
+	margin-top: 0px;   /* remove margin from top of element */
+}
+
+h3 {
+	margin: 0;
+}
+
+a{
+	color: #EF233C;
+}
+
+a:hover{
+	text-decoration:none;
+}
+
+.content-wrap{
+	max-width: 950px;   /* helps with responsive design, so looks like despite screen size  */
+	margin: 0 auto;
+	padding: 60px 50px;      /* pushes content inward and away fron edge  */
+	overflow: auto;     /* self clears floats  */
+}
+
+/*.col-narrow{
+	width: 30%;
+	float: left;
+	border: 1px solid black;    /* to show the boxes */
+	/*min-height: 175px;*/
+/*}
+
+.col-wide{
+	width: 70%;
+	float: left;
+	padding-left: 20px;
+	/*border: 1px solid black;    /* to show the boxes */
+	/*min-height: 175px;*/
+/*}*/
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.btn {
+	text-decoration: none;
+	background: #EF233C;
+	color: white;
+	padding: 10px;
+	display: inline-block;
+
+}
+
+
+
+
+/* Header and Footer */
+header, footer{
+	background: #2B2D42;
+	color: #8D99AE;
+}
+
+/* header */
+.profile-img{
+	/*width: 300px;    /* height automatically adjusts  */
+	border-radius: 50%;  /* turns image to circular shape  */
+	/*float: left;    /* floats profile image to the left  */
+	/*margin-right: 30px; /* adds space between profile image and text  */
+}
+
+.download {   /* for download button  */
+	position: absolute;   /* these 3 positions the button in the bottom right of the header  */
+	bottom: 0;
+	right: 0;
+}
+
+
+header {
+	/*text-align: center;*/
+	padding-top: 50px;
+	position: relative;     /* for download button link, relative to the containing element */
+}
+
+header h1, header h2{
+	color: #EDF2F4;
+	margin:0;
+}
+
+/* footer  */
+footer{
+	text-align: center;
+}
+
+.contact-info a {     /* including the a targets the links in the footer section */
+	/*background: #EDF2F4;*/
+	padding: 10px;     /* adds space between the links  */
+	display: inline-block;  /* ensures it doesn't overlap content */
+}
+
+
+
+/* Navigation */
+nav{
+	text-align: center;
+	background-color: white;
+	position: fixed;
+	top: 0;    /* nav will be at the very top of the page */
+	width: 100%;  /* span nav all the way across the page */
+	/*left: 0;       these do the same as width: 0;
+	right: 0;  */
+}
+
+nav a{
+	display: inline-block;
+	padding: 15px 20px;
+	text-decoration: none;  /* removed default underline  */
+	text-transform: uppercase;
+	font-weight: 700;      /* 700 equal to bold  */
+}
+
+
+
+/* Work Experience */
+.work{
+	background: #EDF2F4;
+}
+
+h3 ~ p {
+	margin: 0;
+}
+
+.job-description {
+	margin-bottom: 25px;     /* some space between job items */
+}
+
+.job-description p:first-of-type {
+	margin-top: 0;
+}
+
+
+/* Education */
+.education{
+	/*background: #8D99AE;*/
+	/*background: linear-gradient(rgba(141, 153, 174, 0.8),rgba(141, 153, 174, 0.5)), url(../images/dirtydelta_h.png) no-repeat /*fixed*/;
+	background: linear-gradient(rgba(141, 153, 174, 0.8),rgba(141, 153, 174, 0.8)), url(../images/dirtydelta_h.png) no-repeat /*fixed*/;
+	/* a is between 0 (no transparency) to 1 (solid color, does not even display image) */
+	background-size: cover;
+}
+
+p + h3 { 			/* whenever a p follows an h3, add some space */
+	margin-top: 30px;
+}
+
+/*  Media Queries -  Responsive */
+@media (min-width: 900px) {
+	.col-narrow{
+		width: 30%;
+		float: left;
+		/*border: 1px solid black;    /* to show the boxes */
+		/*min-height: 175px;*/
+	}
+	
+	.col-wide{
+		width: 70%;
+		float: left;
+		padding-left: 20px;
+		/*border: 1px solid black;    /* to show the boxes */
+		/*min-height: 175px;*/
+	}
+}
+
+@media (max-width: 899px) {
+	header {
+		text-align: center;
+	}
+	.profile-img {
+		width: 200px;
+		
+	}
+	}
+}
